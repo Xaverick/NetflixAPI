@@ -1,9 +1,8 @@
 const mongoose = require('mongoose');
 const schema = mongoose.Schema;
 
-
 const userSchema = new schema({
-    name: {
+    username: {
         type: String,
         required: true,
         min: 6,
@@ -12,13 +11,10 @@ const userSchema = new schema({
     email: { 
         type: String,
         required: true,
+        unique: true,
+        min: 6,
         max: 255,
-    },
 
-    phonenumber: {  
-        type: String,   
-        required: true,
-        min: 10,
     },
 
     password: { 
@@ -27,15 +23,25 @@ const userSchema = new schema({
         min: 8,
     },
 
-    dob: {
-        type: Date,
-        required: true,
-    },
-
-    isSubscribed: {
+    subscription_staus: {
         type: Boolean,
         default: false,
     },
+
+    watch_list : [
+        {
+            type: schema.Types.ObjectId,
+            ref: 'media',
+        }
+    ],
+    
+
+    history: [
+        {
+            type: schema.Types.ObjectId,
+            ref: 'media',
+        }
+    ]
 
 });
 

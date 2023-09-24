@@ -1,14 +1,14 @@
 const router = require('express').Router();
 const user  = require('../controllers/userControllers');
-
+const catchAsync = require('../utils/catchAsync');
 
 router.route('/login')
-    .post(user.login)
+    .post(catchAsync(user.login));
     
     
 
 router.route('/register')
-    .post(user.register)
+    .post(catchAsync(user.register));
 
 
 
