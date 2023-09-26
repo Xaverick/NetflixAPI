@@ -10,6 +10,7 @@ const mongoose = require('mongoose');
 const dbURL = process.env.DB_URL;
 mongoose.connect(dbURL);
 
+
 const db = mongoose.connection;
 db.on('error', (error) => console.error(error));
 db.once('open', () => console.log('Connected to database'));
@@ -23,7 +24,8 @@ app.use(express.json());
 const user = require('./routes/userRoutes');
 app.use('/user', user);
 
-
+const media = require('./routes/mediaRoutes');
+app.use('/data', media);
 
 app.all('*', (req, res, next) => {
     next(new ExpressError('Page Not Found', 404));

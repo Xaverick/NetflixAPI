@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const schema = mongoose.Schema;
-const season = require('./seasonSchema');
+const Season = require('./seasonSchema');
 
 
 const mediaSchema = new schema({
