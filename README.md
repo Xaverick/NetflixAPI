@@ -11,7 +11,7 @@ The Netflix-like Streaming Platform API is a comprehensive RESTful web service t
 #### Base URL
 
 ```http
-https://netflix-api-g992.onrender.com
+   https://netflix-api-g992.onrender.com
 ```
 ### User Routes
 All the data to be sent in JSON format in request body.
@@ -94,7 +94,7 @@ GET https://netflix-api-g992.onrender.com/media/recommend/${userid}
 ### Subscription Route
 
 ```http
-  POST https://netflix-api-g992.onrender.com/payment
+POST https://netflix-api-g992.onrender.com/payment
 ```
 
 
