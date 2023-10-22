@@ -36,49 +36,49 @@ POST https://netflix-api-g992.onrender.com/forgotpassword
 GET https://netflix-api-g992.onrender.com/profile
 ```
 
-| Route |     Description                 |
-| :----------- :------------------------- |
-| Login | Email And Password |
-| Register | Username,Email and Password |
-| Forgot Password | Email |
+| Route | description                       |
+| :-------- | :-------------------------------- |
+| Login   |   **Required**. Email And Password |
+| Register |  **Required**. Username,Email and Password |
+| Forgot Password |  **Required**. Email|
 
 
 ### Media Routes
 All these routes requires that the user is first logged in. Otherwise it does not allow to access the data.
 
 ```http
-  GET https://netflix-api-g992.onrender.com/media
+GET https://netflix-api-g992.onrender.com/media
 ```
 
 ```http
-  GET https://netflix-api-g992.onrender.com/media/${mediaid}
+GET https://netflix-api-g992.onrender.com/media/${mediaid}
 ```
 
 ```http
-  GET https://netflix-api-g992.onrender.com/media/watchlist/${userid}
+GET https://netflix-api-g992.onrender.com/media/watchlist/${userid}
 ```
 
 ```http
-  GET https://netflix-api-g992.onrender.com/media/watchlist/${mediaid}/${userid}
-  POST https://netflix-api-g992.onrender.com/media/watchlist/${mediaid}/${userid}
+GET https://netflix-api-g992.onrender.com/media/watchlist/${mediaid}/${userid}
+POST https://netflix-api-g992.onrender.com/media/watchlist/${mediaid}/${userid}
 ```
 ```http
-  POST https://netflix-api-g992.onrender.com/media/stream/${mediaid}/${userid}
-```
-
-```http
-  GET https://netflix-api-g992.onrender.com/media/history/${userid}
+POST https://netflix-api-g992.onrender.com/media/stream/${mediaid}/${userid}
 ```
 
 ```http
-  POST https://netflix-api-g992.onrender.com/media/history/${userid}/${mediaid}
+GET https://netflix-api-g992.onrender.com/media/history/${userid}
 ```
 
 ```http
-  GET https://netflix-api-g992.onrender.com/media/search/${search}
+POST https://netflix-api-g992.onrender.com/media/history/${userid}/${mediaid}
+```
+
+```http
+GET https://netflix-api-g992.onrender.com/media/search/${search}
 ```
 ```http
-  GET https://netflix-api-g992.onrender.com/media/recommend/${userid}
+GET https://netflix-api-g992.onrender.com/media/recommend/${userid}
 ```
 
 | Parameter | Type     | Description                       |
