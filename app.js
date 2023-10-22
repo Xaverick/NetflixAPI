@@ -27,6 +27,9 @@ app.use('/user', user);
 const media = require('./routes/mediaRoutes');
 app.use('/data', media);
 
+const subscription = require('./routes/subscriptionRoutes');
+app.use('/subscription', subscription);
+
 app.all('*', (req, res, next) => {
     next(new ExpressError('Page Not Found', 404));
 });

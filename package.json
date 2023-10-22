@@ -20,6 +20,7 @@
     "mongodb": "^6.1.0",
     "mongoose": "^7.5.2",
     "nodemailer": "^6.9.5",
-    "nodemon": "^3.0.1"
+    "nodemon": "^3.0.1",
+    "razorpay": "^2.9.2"
   }
 }

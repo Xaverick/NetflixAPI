@@ -11,16 +11,19 @@ const mediaSchema = new schema({
         min: 6,
     },
     
+
     description: { 
         type: String,
         required: true,
     },
+
 
     type: { 
         type: String,
         required: true,
         min: 8,
     },
+
 
     genre: [
         {
@@ -29,12 +32,14 @@ const mediaSchema = new schema({
         }
     ],
 
+
     actors: [
         {
             type: String,
             required: true,
         }
     ],
+
 
     director: [
         {
@@ -43,15 +48,18 @@ const mediaSchema = new schema({
         }
     ],
 
+
     rating: {
         type: Number,
         required: true,
     },
 
+
     release_date: {
         type: Date,
         required: true,
     },
+
 
     image: {
         type: String,
@@ -63,6 +71,7 @@ const mediaSchema = new schema({
         type: String,     
     },
 
+    
     seasons : [
         {
             type: schema.Types.ObjectId,

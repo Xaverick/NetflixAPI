@@ -23,7 +23,7 @@ const userSchema = new schema({
         min: 8,
     },
 
-    subscription_staus: {
+    subscription_status: {
         type: Boolean,
         default: false,
     },
@@ -32,7 +32,8 @@ const userSchema = new schema({
         {
             type: schema.Types.ObjectId,
             ref: 'media',
-        }
+            
+        },
     ],
     
 
