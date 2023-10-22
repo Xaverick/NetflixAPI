@@ -59,12 +59,12 @@ module.exports.profile = async (req, res) => {
 
 
 module.exports.forgotPassword = async (req, res) => {
-    const { email, clientLink } = req.body;
+    const { email} = req.body;
     const user = await User.findOne({email: email});
     if(user){
         const secret = `${process.env.SECRET}${user.password}`;
         const token = jwt.sign({ id: user._id } , secret , { expiresIn: '5m' });
-        const link = `${clientLink}/resetpassword/${user._id}/${token}`;
+        // const link = `${clientLink}/resetpassword/${user._id}/${token}`;
         // const link = `http://localhost:3000/user/resetpassword/${user._id}/${token}`;
         // res.json(link);
         //sending Email to the user Gmail
